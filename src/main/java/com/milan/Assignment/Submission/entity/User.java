@@ -47,7 +47,7 @@ public class User {
         authorities.forEach(authority -> authority.getUsers().add(this));
     }
 
-    public void removeAuthority(Set<Authority> authorities) {
+    public void removeAuthorities(Set<Authority> authorities) {
         this.authorities.removeAll(authorities);
         authorities.forEach(authority -> authority.getUsers().remove(this));
     }

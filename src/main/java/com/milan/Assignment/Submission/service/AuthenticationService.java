@@ -2,7 +2,7 @@ package com.milan.Assignment.Submission.service;
 
 import com.milan.Assignment.Submission.dto.LoginUserDto;
 import com.milan.Assignment.Submission.dto.RegisterUserDto;
-import com.milan.Assignment.Submission.dto.RegisterUserResponseDto;
+import com.milan.Assignment.Submission.dto.RegisterResponseDto;
 import com.milan.Assignment.Submission.dto.mapper.UserToRegisteredUserDtoMapper;
 import com.milan.Assignment.Submission.entity.Authority;
 import com.milan.Assignment.Submission.entity.User;
@@ -31,7 +31,7 @@ public class AuthenticationService {
         this.passwordEncoder = passwordEncoder;
     }
 
-    public RegisterUserResponseDto signUp(RegisterUserDto request) {
+    public RegisterResponseDto signUp(RegisterUserDto request) {
         Set<Authority> authorities = authorityRepository.findAllByAuthority(request.getAuthorities());
 
         User user = new User();

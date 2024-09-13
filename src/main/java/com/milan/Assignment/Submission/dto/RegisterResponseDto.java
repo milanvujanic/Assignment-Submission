@@ -3,14 +3,14 @@ package com.milan.Assignment.Submission.dto;
 import java.time.LocalDate;
 import java.util.Set;
 
-public class RegisterUserResponseDto {
+public class RegisterResponseDto {
 
     private Long id;
     private String username;
     private LocalDate cohortStartDate;
     private Set<String> authorities;
 
-    public RegisterUserResponseDto(Long id, String username, LocalDate cohortStartDate, Set<String> authorities) {
+    public RegisterResponseDto(Long id, String username, LocalDate cohortStartDate, Set<String> authorities) {
         this.id = id;
         this.username = username;
         this.cohortStartDate = cohortStartDate;
